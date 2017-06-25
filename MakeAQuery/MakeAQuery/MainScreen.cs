@@ -48,16 +48,61 @@ namespace MakeAQuery
 
         private void TypeOfQButtonMainScreen_Click(object sender, EventArgs e)
         {
-         
-            MainScreenFinalResultsTxtBox.Text += "UPDATE table_name SET column1 = value1, column2 = value2,... WHERE";
+
+            //MainScreenFinalResultsTxtBox.Text += "UPDATE table_name SET column1 = value1, column2 = value2,... WHERE";
             string item = "";
             foreach (var i in TypeOfQueryListBox.SelectedIndices)
             {
                 item += TypeOfQueryListBox.Items[(int)i] + Environment.NewLine;
             }
-            
+            MessageBox.Show(item);
+            string thisItem = item;
+            switch (thisItem)
+            {
+                case "Select":
+                    MainScreenFinalResultsTxtBox.Text =("SELECT Name, ProductNumber, ListPrice AS Price" +
+                                    "FROM Production.Product"+ 
+                                    "WHERE ProductLine = 'R'" +
+                                    "AND DaysToManufacture < 4"+
+                                    "ORDER BY Name ASC;");
+                    break;
+                case "Update":
+                    MessageBox.Show("SELECT Name, ProductNumber, ListPrice AS Price" +
+                                    "FROM Production.Product" +
+                                    "WHERE ProductLine = 'R'" +
+                                    "AND DaysToManufacture < 4" +
+                                    "ORDER BY Name ASC;");
+                    break;
+                case "Join":
+                    MessageBox.Show("SELECT Name, ProductNumber, ListPrice AS Price" +
+                                    "FROM Production.Product" +
+                                    "WHERE ProductLine = 'R'" +
+                                    "AND DaysToManufacture < 4" +
+                                    "ORDER BY Name ASC;");   
+                    break;
+                case "Inner Join":
+                    MessageBox.Show("SELECT Name, ProductNumber, ListPrice AS Price" +
+                                    "FROM Production.Product" +
+                                    "WHERE ProductLine = 'R'" +
+                                    "AND DaysToManufacture < 4" +
+                                    "ORDER BY Name ASC;");
+                    break;
+                case "Left Join":
+                    MessageBox.Show("SELECT Name, ProductNumber, ListPrice AS Price" +
+                                    "FROM Production.Product" +
+                                    "WHERE ProductLine = 'R'" +
+                                    "AND DaysToManufacture < 4" +
+                                    "ORDER BY Name ASC;");
+                    break;
+                case "Right Join":
+                    MessageBox.Show("SELECT Name, ProductNumber, ListPrice AS Price" +
+                                    "FROM Production.Product" +
+                                    "WHERE ProductLine = 'R'" +
+                                    "AND DaysToManufacture < 4" +
+                                    "ORDER BY Name ASC;");
+                    break;
+            }
         }
-
         private void MainScreenFinalResultsTxtBox_TextChanged(object sender, EventArgs e)
         {
         }
@@ -224,7 +269,18 @@ namespace MakeAQuery
             {
                 item += selectFontColorListBox.Items[(int)i] + Environment.NewLine;
             }
-            
+            switch (item)
+            {
+                case "Red":
+                    MessageBox.Show("Red");
+                    break;
+                case "Blue":
+                    MessageBox.Show("Blue");
+                    break;
+                case "Green":
+                    MessageBox.Show("Green");
+                    break;
+            }
         }
     }
 }
