@@ -1,0 +1,29 @@
+C:\Users\highfever666\Documents\Current Projects\MakeAQueryProgram\MakeAQuery\MakeAQuery\bin\Debug\MakeAQuery.exe.config
+C:\Users\highfever666\Documents\Current Projects\MakeAQueryProgram\MakeAQuery\MakeAQuery\bin\Debug\MakeAQuery.exe
+C:\Users\highfever666\Documents\Current Projects\MakeAQueryProgram\MakeAQuery\MakeAQuery\bin\Debug\MakeAQuery.pdb
+C:\Users\highfever666\Documents\Current Projects\MakeAQueryProgram\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.csprojResolveAssemblyReference.cache
+C:\Users\highfever666\Documents\Current Projects\MakeAQueryProgram\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.Form1.resources
+C:\Users\highfever666\Documents\Current Projects\MakeAQueryProgram\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.Properties.Resources.resources
+C:\Users\highfever666\Documents\Current Projects\MakeAQueryProgram\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.csproj.GenerateResource.Cache
+C:\Users\highfever666\Documents\Current Projects\MakeAQueryProgram\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.exe
+C:\Users\highfever666\Documents\Current Projects\MakeAQueryProgram\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.pdb
+C:\Users\derek\Documents\Programming April 2016\MakeAQueryProgram\MakeAQuery\MakeAQuery\bin\Debug\MakeAQuery.exe.config
+C:\Users\derek\Documents\Programming April 2016\MakeAQueryProgram\MakeAQuery\MakeAQuery\bin\Debug\MakeAQuery.exe
+C:\Users\derek\Documents\Programming April 2016\MakeAQueryProgram\MakeAQuery\MakeAQuery\bin\Debug\MakeAQuery.pdb
+C:\Users\derek\Documents\Programming April 2016\MakeAQueryProgram\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.About.resources
+C:\Users\derek\Documents\Programming April 2016\MakeAQueryProgram\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.Form1.resources
+C:\Users\derek\Documents\Programming April 2016\MakeAQueryProgram\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.MainScreen.resources
+C:\Users\derek\Documents\Programming April 2016\MakeAQueryProgram\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.Properties.Resources.resources
+C:\Users\derek\Documents\Programming April 2016\MakeAQueryProgram\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.csproj.GenerateResource.Cache
+C:\Users\derek\Documents\Programming April 2016\MakeAQueryProgram\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.exe
+C:\Users\derek\Documents\Programming April 2016\MakeAQueryProgram\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.pdb
+C:\Users\highfever666\Desktop\MakeAQuery\MakeAQuery\bin\Debug\MakeAQuery.exe.config
+C:\Users\highfever666\Desktop\MakeAQuery\MakeAQuery\bin\Debug\MakeAQuery.exe
+C:\Users\highfever666\Desktop\MakeAQuery\MakeAQuery\bin\Debug\MakeAQuery.pdb
+C:\Users\highfever666\Desktop\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.About.resources
+C:\Users\highfever666\Desktop\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.Form1.resources
+C:\Users\highfever666\Desktop\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.MainScreen.resources
+C:\Users\highfever666\Desktop\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.Properties.Resources.resources
+C:\Users\highfever666\Desktop\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.csproj.GenerateResource.Cache
+C:\Users\highfever666\Desktop\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.exe
+C:\Users\highfever666\Desktop\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.pdb
