@@ -56,7 +56,6 @@ namespace MakeAQuery
                 item += TypeOfQueryListBox.Items[(int)i] + Environment.NewLine;
                 if (item == "Select\r\n")
                 {
-                    //MainScreenFinalResultsTxtBox.ForeColor = Color.DarkRed;
                     MainScreenFinalResultsTxtBox.Text += ("SELECT Name, ProductNumber, ListPrice AS Price\r\n" +
                                     "FROM Production.Product\r\n" +
                                     "WHERE ProductLine = 'R'\r\n" +
@@ -65,7 +64,6 @@ namespace MakeAQuery
                 }
                 else if (item == "Update\r\n")
                 {
-                    //MainScreenFinalResultsTxtBox.ForeColor = Color.SteelBlue;
                     MainScreenFinalResultsTxtBox.Text += ("SELECT Name, ProductNumber, ListPrice AS Price\r\n" +
                                     "FROM Production.Product\r\n" +
                                     "WHERE ProductLine = 'R'\r\n" +
@@ -74,7 +72,6 @@ namespace MakeAQuery
                 }
                 else if (item == "Join\r\n")
                 {
-                    //MainScreenFinalResultsTxtBox.ForeColor = Color.SeaGreen;
                     MainScreenFinalResultsTxtBox.Text += ("SELECT Name, ProductNumber, ListPrice AS Price\r\n" +
                                     "FROM Production.Product\r\n" +
                                     "WHERE ProductLine = 'R'\r\n" +
@@ -83,7 +80,6 @@ namespace MakeAQuery
                 }
                 else if (item == "Inner Join\r\n")
                 {
-                    //MainScreenFinalResultsTxtBox.ForeColor = Color.SeaGreen;
                     MainScreenFinalResultsTxtBox.Text += ("SELECT Name, ProductNumber, ListPrice AS Price\r\n" +
                                     "FROM Production.Product\r\n" +
                                     "WHERE ProductLine = 'R'\r\n" +
@@ -92,7 +88,6 @@ namespace MakeAQuery
                 }
                 else if (item == "Left Join\r\n")
                 {
-                    //MainScreenFinalResultsTxtBox.ForeColor = Color.SeaGreen;
                     MainScreenFinalResultsTxtBox.Text += ("SELECT Name, ProductNumber, ListPrice AS Price\r\n" +
                                     "FROM Production.Product\r\n" +
                                     "WHERE ProductLine = 'R'\r\n" +
@@ -101,7 +96,6 @@ namespace MakeAQuery
                 }
                 else if (item == "Right Join\r\n")
                 {
-                    //MainScreenFinalResultsTxtBox.ForeColor = Color.SeaGreen;
                     MainScreenFinalResultsTxtBox.Text += ("SELECT Name, ProductNumber, ListPrice AS Price\r\n" +
                                     "FROM Production.Product\r\n" +
                                     "WHERE ProductLine = 'R'\r\n" +
@@ -122,6 +116,7 @@ namespace MakeAQuery
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //Create NW DB
             string getMainScreenText = MainScreenFinalResultsTxtBox.Text;
             string getDbName = dbNameTextBox.Text;
             //Add a try catch block here.. 6/25/2017
@@ -226,10 +221,51 @@ namespace MakeAQuery
 
         private void addAndReplaceDBName_Click(object sender, EventArgs e)
         {
-            Regex dbNameCreateMatch2 = new Regex(dbNameTextBox.Text);
-            string dbNewNameReplaceMatch2 = dbNameCreateMatch2.Replace(MainScreenFinalResultsTxtBox.Text, dbNameTextBox.Text);
-            MainScreenFinalResultsTxtBox.Text = "";
-            MainScreenFinalResultsTxtBox.Text = dbNewNameReplaceMatch2;
+            //Regex dbNameCreateMatch2 = new Regex(dbNameTextBox.Text);
+            //string dbNewNameReplaceMatch2 = dbNameCreateMatch2.Replace(MainScreenFinalResultsTxtBox.Text, dbNameTextBox.Text);
+            //MainScreenFinalResultsTxtBox.Text = "";
+            //MainScreenFinalResultsTxtBox.Text = dbNewNameReplaceMatch2;
+
+
+            string getMainScreenText = MainScreenFinalResultsTxtBox.Text;
+            string getDbName = dbNameTextBox.Text;
+            //Add a try catch block here.. 6/25/2017
+            if (getDbName == "")
+            {
+                MainScreenFinalResultsTxtBox.Text += "USE master;\r\n" +
+                                                     "GO\r\n" +
+                                                     "--Delete the TestDataBaseName database if it exists.\r\n" +
+                                                     "IF EXISTS(SELECT * from sys.databases WHERE name='TestDataBaseName')\r\n" +
+                                                     "BEGIN\r\n" +
+                                                        "DROP DATABASE TestDataBaseName;\r\n" +
+                                                     "END\r\n" +
+
+                                                      "--Create a new database called TestDataBaseName.\r\n" +
+                                                      "CREATE DATABASE TestDataBaseName;\r\n" +
+                                                      "Press the F5 key to execute the code and create the database.\r\n";
+            }
+            else if (getDbName != null)
+            {
+                MainScreenFinalResultsTxtBox.Text += "USE master;\r\n" +
+                                                         "GO\r\n" +
+                                                         "--Delete the " + getDbName + " database if it exists.\r\n" +
+                                                         "IF EXISTS(SELECT * from sys.databases WHERE name= '" + getDbName + "')\r\n" +
+                                                         "BEGIN\r\n" +
+                                                            "DROP DATABASE " + getDbName + ";\r\n" +
+                                                         "END\r\n" +
+
+                                                          "--Create a new database called " + getDbName + ".\r\n" +
+                                                          "CREATE DATABASE " + getDbName + ";\r\n" +
+                                                          "Press the F5 key to execute the code and create the database.\r\n";
+            }
+            else
+            {
+                //Regex dbNameCreateMatch = new Regex("TestDataBaseName");
+                //string dbNewNameReplaceMatch = dbNameCreateMatch.Replace(MainScreenFinalResultsTxtBox.Text, dbNameTextBox.Text);
+                //MainScreenFinalResultsTxtBox.Text = "";
+                //MainScreenFinalResultsTxtBox.Text = dbNewNameReplaceMatch;
+                MessageBox.Show("BeepBopBoop Something did not CumPutE!!");
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -240,8 +276,14 @@ namespace MakeAQuery
 
         private void sendFromClipToWhereCbtn_Click(object sender, EventArgs e)
         {
-            string setWhereTextFromClip = clipBoardTextBox.Text;
-            MainScreenFinalResultsTxtBox.Text += (setWhereTextFromClip);
+            //string setWhereTextFromClip = clipBoardTextBox.Text;
+            //MainScreenFinalResultsTxtBox.Text += (setWhereTextFromClip);
+
+            Regex dbNameCreateMatch = new Regex("Where");
+            string addToWhereClause = dbNameCreateMatch.Replace(MainScreenFinalResultsTxtBox.Text, clipBoardTextBox.Text);
+            MainScreenFinalResultsTxtBox.Text = "";
+            MainScreenFinalResultsTxtBox.Text += addToWhereClause;
+            
         }
 
         private void clearMainScreenBtn_Click(object sender, EventArgs e)

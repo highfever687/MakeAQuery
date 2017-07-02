@@ -38,6 +38,7 @@ namespace MakeAQuery
 
                 inputBox.DataSource = inputItems;
                 outputBox.DataSource = outItems;
+                Clipboard.SetText(outputBox.Text);
                 MainScreen frm = new MainScreen(outputBox.Text);
                 frm.ShowDialog();
                 frm.Close();

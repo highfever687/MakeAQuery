@@ -37,3 +37,4 @@ C:\Users\highfever666\Documents\Projects\MakeAQuery\trunk\MakeAQuery\MakeAQuery\
 C:\Users\highfever666\Documents\Projects\MakeAQuery\trunk\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.csproj.GenerateResource.Cache
 C:\Users\highfever666\Documents\Projects\MakeAQuery\trunk\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.exe
 C:\Users\highfever666\Documents\Projects\MakeAQuery\trunk\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.pdb
+C:\Users\highfever666\Documents\Projects\MakeAQuery\trunk\MakeAQuery\MakeAQuery\obj\Debug\MakeAQuery.csprojResolveAssemblyReference.cache
