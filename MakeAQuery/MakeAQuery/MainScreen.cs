@@ -54,54 +54,62 @@ namespace MakeAQuery
             foreach (var i in TypeOfQueryListBox.SelectedIndices)
             {
                 item += TypeOfQueryListBox.Items[(int)i] + Environment.NewLine;
+                if (item == "Select\r\n")
+                {
+                    //MainScreenFinalResultsTxtBox.ForeColor = Color.DarkRed;
+                    MainScreenFinalResultsTxtBox.Text += ("SELECT Name, ProductNumber, ListPrice AS Price\r\n" +
+                                    "FROM Production.Product\r\n" +
+                                    "WHERE ProductLine = 'R'\r\n" +
+                                    "AND DaysToManufacture < 4\r\n" +
+                                    "ORDER BY Name ASC;");
+                }
+                else if (item == "Update\r\n")
+                {
+                    //MainScreenFinalResultsTxtBox.ForeColor = Color.SteelBlue;
+                    MainScreenFinalResultsTxtBox.Text += ("SELECT Name, ProductNumber, ListPrice AS Price\r\n" +
+                                    "FROM Production.Product\r\n" +
+                                    "WHERE ProductLine = 'R'\r\n" +
+                                    "AND DaysToManufacture < 4\r\n" +
+                                    "ORDER BY Name ASC;\r\n");
+                }
+                else if (item == "Join\r\n")
+                {
+                    //MainScreenFinalResultsTxtBox.ForeColor = Color.SeaGreen;
+                    MainScreenFinalResultsTxtBox.Text += ("SELECT Name, ProductNumber, ListPrice AS Price\r\n" +
+                                    "FROM Production.Product\r\n" +
+                                    "WHERE ProductLine = 'R'\r\n" +
+                                    "AND DaysToManufacture < 4\r\n" +
+                                    "ORDER BY Name ASC;\r\n");   
+                }
+                else if (item == "Inner Join\r\n")
+                {
+                    //MainScreenFinalResultsTxtBox.ForeColor = Color.SeaGreen;
+                    MainScreenFinalResultsTxtBox.Text += ("SELECT Name, ProductNumber, ListPrice AS Price\r\n" +
+                                    "FROM Production.Product\r\n" +
+                                    "WHERE ProductLine = 'R'\r\n" +
+                                    "AND DaysToManufacture < 4\r\n" +
+                                    "ORDER BY Name ASC;\r\n");
+                }
+                else if (item == "Left Join\r\n")
+                {
+                    //MainScreenFinalResultsTxtBox.ForeColor = Color.SeaGreen;
+                    MainScreenFinalResultsTxtBox.Text += ("SELECT Name, ProductNumber, ListPrice AS Price\r\n" +
+                                    "FROM Production.Product\r\n" +
+                                    "WHERE ProductLine = 'R'\r\n" +
+                                    "AND DaysToManufacture < 4\r\n" +
+                                    "ORDER BY Name ASC;\r\n");
+                }
+                else if (item == "Right Join\r\n")
+                {
+                    //MainScreenFinalResultsTxtBox.ForeColor = Color.SeaGreen;
+                    MainScreenFinalResultsTxtBox.Text += ("SELECT Name, ProductNumber, ListPrice AS Price\r\n" +
+                                    "FROM Production.Product\r\n" +
+                                    "WHERE ProductLine = 'R'\r\n" +
+                                    "AND DaysToManufacture < 4\r\n" +
+                                    "ORDER BY Name ASC;");
+                }
             }
-            MessageBox.Show(item);
-            string thisItem = item;
-            switch (thisItem)
-            {
-                case "Select":
-                    MainScreenFinalResultsTxtBox.Text =("SELECT Name, ProductNumber, ListPrice AS Price" +
-                                    "FROM Production.Product"+ 
-                                    "WHERE ProductLine = 'R'" +
-                                    "AND DaysToManufacture < 4"+
-                                    "ORDER BY Name ASC;");
-                    break;
-                case "Update":
-                    MessageBox.Show("SELECT Name, ProductNumber, ListPrice AS Price" +
-                                    "FROM Production.Product" +
-                                    "WHERE ProductLine = 'R'" +
-                                    "AND DaysToManufacture < 4" +
-                                    "ORDER BY Name ASC;");
-                    break;
-                case "Join":
-                    MessageBox.Show("SELECT Name, ProductNumber, ListPrice AS Price" +
-                                    "FROM Production.Product" +
-                                    "WHERE ProductLine = 'R'" +
-                                    "AND DaysToManufacture < 4" +
-                                    "ORDER BY Name ASC;");   
-                    break;
-                case "Inner Join":
-                    MessageBox.Show("SELECT Name, ProductNumber, ListPrice AS Price" +
-                                    "FROM Production.Product" +
-                                    "WHERE ProductLine = 'R'" +
-                                    "AND DaysToManufacture < 4" +
-                                    "ORDER BY Name ASC;");
-                    break;
-                case "Left Join":
-                    MessageBox.Show("SELECT Name, ProductNumber, ListPrice AS Price" +
-                                    "FROM Production.Product" +
-                                    "WHERE ProductLine = 'R'" +
-                                    "AND DaysToManufacture < 4" +
-                                    "ORDER BY Name ASC;");
-                    break;
-                case "Right Join":
-                    MessageBox.Show("SELECT Name, ProductNumber, ListPrice AS Price" +
-                                    "FROM Production.Product" +
-                                    "WHERE ProductLine = 'R'" +
-                                    "AND DaysToManufacture < 4" +
-                                    "ORDER BY Name ASC;");
-                    break;
-            }
+
         }
         private void MainScreenFinalResultsTxtBox_TextChanged(object sender, EventArgs e)
         {
@@ -263,23 +271,23 @@ namespace MakeAQuery
 
         private void changeFontColorBtn_Click(object sender, EventArgs e)
         {
-            MainScreenFinalResultsTxtBox.Text += "Red";
             string item = "";
             foreach (var i in selectFontColorListBox.SelectedIndices)
             {
                 item += selectFontColorListBox.Items[(int)i] + Environment.NewLine;
-            }
-            switch (item)
-            {
-                case "Red":
-                    MessageBox.Show("Red");
-                    break;
-                case "Blue":
-                    MessageBox.Show("Blue");
-                    break;
-                case "Green":
-                    MessageBox.Show("Green");
-                    break;
+                if (item == "Red\r\n")
+                {
+                    MainScreenFinalResultsTxtBox.ForeColor = Color.DarkRed;
+                }
+                else if (item == "Blue\r\n")
+                {
+                    MainScreenFinalResultsTxtBox.ForeColor = Color.SteelBlue;
+                }
+                else if (item == "Green\r\n")
+                {
+                    MainScreenFinalResultsTxtBox.ForeColor = Color.SeaGreen;
+                }
+
             }
         }
     }
